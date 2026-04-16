@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Radius Ads — Oakville Direct Mail Postcards</title>
-  <meta name="description" content="Get your business into 10,000 Oakville mailboxes. Shared postcard advertising delivered to high-income homeowners. One business per category." />
+  <title>Radius Ads — Local Direct Mail Postcards</title>
+  <meta name="description" content="Get your business into 10,000 local mailboxes. Shared postcard advertising delivered to high-income homeowners across the GTA West. One business per category." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
@@ -29,15 +29,15 @@
     <!-- HERO -->
     <section class="hero">
       <div class="container">
-        <p class="eyebrow">Oakville direct mail</p>
+        <p class="eyebrow">GTA West direct mail</p>
         <h1>Get your business into <em>10,000</em> local&nbsp;mailboxes</h1>
-        <p class="hero-sub">Radius Ads puts your business on a shared postcard delivered to high-income homeowners in Oakville. One business per category. No competition on the card.</p>
+        <p class="hero-sub">Radius Ads puts your business on a shared postcard delivered to high-income homeowners across the GTA West. One business per category. No competition on the card.</p>
         <div class="hero-actions">
           <a href="#reserve" class="btn btn-primary">Reserve your spot</a>
           <a href="#how-it-works" class="btn btn-ghost">See how it works</a>
         </div>
         <div class="hero-stats">
-          <div class="stat"><span class="stat-num">10,000</span><span class="stat-label">Oakville homes reached</span></div>
+          <div class="stat"><span class="stat-num">10,000</span><span class="stat-label">Local homes reached</span></div>
           <div class="stat-divider"></div>
           <div class="stat"><span class="stat-num">1</span><span class="stat-label">Business per category</span></div>
           <div class="stat-divider"></div>
@@ -56,7 +56,7 @@
           <div class="step">
             <div class="step-num">1</div>
             <h3>Choose your card</h3>
-            <p>Pick the reach that fits your budget — 2,500 or 10,000 Oakville homes.</p>
+            <p>Pick the reach that fits your budget — 2,500 or 10,000 homes in your target market.</p>
           </div>
           <div class="step">
             <div class="step-num">2</div>
@@ -96,7 +96,7 @@
               <span class="price-period">per ad space</span>
             </div>
             <ul class="card-features">
-              <li>2,500 Oakville homeowners</li>
+              <li>2,500 local homeowners</li>
               <li>One business per category</li>
               <li>Ad design included, free revisions</li>
               <li>Dynamic QR code for tracking</li>
@@ -117,7 +117,7 @@
               <span class="price-period">per ad space</span>
             </div>
             <ul class="card-features">
-              <li>10,000 Oakville homeowners</li>
+              <li>10,000 local homeowners</li>
               <li>One business per category</li>
               <li>Ad design included, free revisions</li>
               <li>Dynamic QR code for tracking</li>
@@ -145,7 +145,7 @@
           <div class="why-item">
             <div class="why-icon">&#127968;</div>
             <h3>Homeowners, not scrollers</h3>
-            <p>Targeted to single-family homes in Oakville. The audience actually needs home services.</p>
+            <p>Targeted to single-family homes in your chosen market. The audience actually needs home services.</p>
           </div>
           <div class="why-item">
             <div class="why-icon">&#128683;</div>
@@ -165,8 +165,18 @@
     <section class="section section-alt" id="availability">
       <div class="container">
         <p class="section-label">Current availability</p>
-        <h2>Open categories — next Oakville mailing</h2>
-        <p class="section-sub">Categories below are for the upcoming Neighbourhood Card run. Community Card availability is separate.</p>
+        <h2>Open categories — next mailing</h2>
+        <p class="section-sub">Select a market to see available categories for the upcoming Neighbourhood Card run. Community Card availability is separate.</p>
+        <div class="market-select-wrap">
+          <label for="market-select">Select a market</label>
+          <select id="market-select" onchange="filterMarket(this.value)">
+            <option value="oakville">Oakville</option>
+            <option value="burlington">Burlington</option>
+            <option value="milton">Milton</option>
+            <option value="mississauga">Mississauga</option>
+            <option value="hamilton">Hamilton</option>
+          </select>
+        </div>
         <div class="spot-grid">
           <div class="spot open"><span class="spot-cat">Landscaping</span><span class="spot-status">Available</span></div>
           <div class="spot open"><span class="spot-cat">Plumbing</span><span class="spot-status">Available</span></div>
@@ -181,6 +191,7 @@
           <div class="spot open"><span class="spot-cat">Painting</span><span class="spot-status">Available</span></div>
           <div class="spot open"><span class="spot-cat">Dog services</span><span class="spot-status">Available</span></div>
         </div>
+        <p class="spot-note">Availability updates as spots are reserved. Categories not listed above are also available — just ask.</p>
       </div>
     </section>
 
@@ -221,9 +232,20 @@
               </select>
             </div>
             <div class="form-group">
-              <label for="category">Your business category</label>
-              <input type="text" id="category" name="category" placeholder="e.g. Plumbing, Landscaping" required />
+              <label for="market">Target market</label>
+              <select id="market" name="market" required>
+                <option value="">Select a market...</option>
+                <option value="oakville">Oakville</option>
+                <option value="burlington">Burlington</option>
+                <option value="milton">Milton</option>
+                <option value="mississauga">Mississauga</option>
+                <option value="hamilton">Hamilton</option>
+              </select>
             </div>
+          </div>
+          <div class="form-group">
+            <label for="category">Your business category</label>
+            <input type="text" id="category" name="category" placeholder="e.g. Plumbing, Landscaping" required />
           </div>
           <div class="form-group">
             <label for="offer">Promotion or offer you'd like to feature <span class="label-optional">(optional)</span></label>
@@ -276,11 +298,20 @@
           </div>
           <div class="faq-item">
             <button class="faq-q" onclick="toggleFaq(this)">
-              What areas of Oakville do you target?
+              What markets do you serve?
               <span class="faq-arrow">&#8595;</span>
             </button>
             <div class="faq-a">
-              <p>We target high-income single-family home neighbourhoods using Canada Post Neighbourhood Mail routes. Specific routes vary per mailing. We can confirm exact coverage before you commit.</p>
+              <p>We currently run mailings in the following GTA West and Hamilton area markets: <strong>Oakville, Burlington, Milton, Mississauga,</strong> and <strong>Hamilton</strong>. Each market runs as a separate card with its own set of advertisers. If you serve multiple areas, you can reserve a spot on more than one card.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">
+              How are target neighbourhoods selected within each market?
+              <span class="faq-arrow">&#8595;</span>
+            </button>
+            <div class="faq-a">
+              <p>We target high-income single-family home neighbourhoods using Canada Post Neighbourhood Mail routes. We sort by income and housing type to avoid sending home service ads to condos and apartments. Specific routes vary per mailing and we can confirm exact coverage before you commit.</p>
             </div>
           </div>
           <div class="faq-item">
@@ -319,7 +350,7 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <a href="/" class="logo">Radius<span>Ads</span></a>
-      <p>Serving Oakville, ON &nbsp;&middot;&nbsp; radiusads.biz</p>
+      <p>Serving Oakville, Burlington, Milton, Mississauga &amp; Hamilton &nbsp;&middot;&nbsp; radiusads.biz</p>
       <p class="footer-copy">&copy; 2025 Radius Ads. All rights reserved.</p>
     </div>
   </footer>

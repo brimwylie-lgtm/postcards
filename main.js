@@ -1,3 +1,9 @@
+function filterMarket(market) {
+  const label = document.querySelector('#availability h2');
+  const markets = { oakville: 'Oakville', burlington: 'Burlington', milton: 'Milton', mississauga: 'Mississauga', hamilton: 'Hamilton' };
+  if (label) label.textContent = 'Open categories — ' + (markets[market] || '') + ' mailing';
+}
+
 function toggleFaq(btn) {
   const item = btn.closest('.faq-item');
   const isOpen = item.classList.contains('open');
