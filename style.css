@@ -195,6 +195,34 @@ nav a:hover { color: var(--text); }
 @media (max-width: 400px) { .cat-list { grid-template-columns: 1fr; } }
 
 
+/* PRICING FLAGS */
+.pricing-flags { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 1.75rem; }
+.pflag { display: flex; align-items: center; gap: 6px; background: #E1F5EE; border: 0.5px solid #9FE1CB; border-radius: 100px; padding: 5px 14px; font-size: 13px; font-weight: 500; color: #085041; }
+.pflag span { color: #1D9E75; font-size: 14px; }
+
+/* CARD LAYOUT */
+.card-layout-wrap { display: grid; grid-template-columns: 1fr 260px; gap: 2.5rem; margin-top: 2rem; align-items: start; }
+.cl-card { background: var(--bg); border: 1px solid var(--border-mid); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
+.cl-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border-mid); }
+.cl-slot { background: var(--bg); padding: 14px 10px; min-height: 64px; display: flex; align-items: center; justify-content: center; text-align: center; }
+.cl-slot span { font-size: 11px; color: var(--text-muted); font-weight: 500; }
+.cl-slot.highlight { background: #E1F5EE; }
+.cl-slot.highlight span { color: #085041; font-weight: 500; }
+.cl-slot.wide { grid-column: span 2; }
+.cl-spine { background: var(--bg-alt); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 8px 14px; display: flex; align-items: center; gap: 1rem; }
+.cl-spine-logo { display: flex; align-items: center; gap: 5px; font-size: 12px; font-weight: 500; color: var(--text); }
+.cl-spine-tag { font-size: 11px; color: var(--text-muted); flex: 1; }
+.cl-postage { font-size: 9px; color: var(--text-light); text-align: right; line-height: 1.5; }
+.cl-postage span { display: block; }
+.card-layout-notes { display: flex; flex-direction: column; gap: 1.25rem; }
+.cl-note { display: flex; align-items: flex-start; gap: 1rem; }
+.cl-note-num { font-family: 'Fraunces', serif; font-size: 1.6rem; font-weight: 600; color: #1D9E75; min-width: 40px; line-height: 1; }
+.cl-note-title { font-size: 14px; font-weight: 500; margin: 0 0 2px; }
+.cl-note-body { font-size: 12px; color: var(--text-muted); margin: 0; line-height: 1.5; }
+.cl-disclaimer { font-size: 11px; color: var(--text-light); margin-top: 1rem; }
+.ad-realtor, .ad-plumber { width: 216px; height: 290px; }
+@media (max-width: 700px) { .card-layout-wrap { grid-template-columns: 1fr; } }
+
 /* WAITLIST */
 .waitlist-wrap { background: var(--bg-alt); border-radius: var(--radius); padding: 2rem; margin-top: 2rem; }
 .tally-frame { display: block; border: none; width: 100%; min-height: 400px; }
