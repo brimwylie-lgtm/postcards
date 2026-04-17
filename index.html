@@ -14,12 +14,20 @@
 
   <header class="site-header">
     <div class="container header-inner">
-      <a href="/" class="logo">Radius<span>Ads</span></a>
+      <a href="/" class="logo">
+        <svg class="logo-icon" viewBox="0 0 100 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="46" r="38" stroke="#E8621A" stroke-width="9" fill="none"/>
+          <circle cx="50" cy="46" r="24" stroke="#E8621A" stroke-width="9" fill="none"/>
+          <circle cx="50" cy="46" r="8" fill="#E8621A"/>
+          <path d="M50 84 L38 100 L50 94 L62 100 Z" fill="#E8621A"/>
+        </svg>
+        Radius<span>Ads</span>
+      </a>
       <nav>
         <a href="#how-it-works">How it works</a>
         <a href="#pricing">Pricing</a>
         <a href="#availability">Availability</a>
-        <a href="#reserve" class="nav-cta">Reserve a spot</a>
+        <a href="#waitlist" class="nav-cta">Join the waitlist</a>
       </nav>
     </div>
   </header>
@@ -29,11 +37,11 @@
     <!-- HERO -->
     <section class="hero">
       <div class="container">
-        <p class="eyebrow">GTA West direct mail</p>
+        <p class="eyebrow">GTA West direct mail — launching soon</p>
         <h1>Get your business into <em>10,000</em> local&nbsp;mailboxes</h1>
         <p class="hero-sub">Radius Ads puts your business on a shared postcard delivered to high-income homeowners across the GTA West. One business per category. No competition on the card.</p>
         <div class="hero-actions">
-          <a href="#reserve" class="btn btn-primary">Reserve your spot</a>
+          <a href="#waitlist" class="btn btn-primary">Join the waitlist</a>
           <a href="#how-it-works" class="btn btn-ghost">See how it works</a>
         </div>
         <div class="hero-stats">
@@ -102,7 +110,7 @@
               <li>Dynamic QR code for tracking</li>
               <li>Great for restaurants, retail, bakeries</li>
             </ul>
-            <a href="#reserve" class="btn btn-outline btn-full">Reserve a spot</a>
+            <a href="#waitlist" class="btn btn-outline btn-full">Join the waitlist</a>
           </div>
 
           <div class="card card-featured">
@@ -124,7 +132,7 @@
               <li>Double spaces available</li>
               <li>Best for home services and trades</li>
             </ul>
-            <a href="#reserve" class="btn btn-primary btn-full">Reserve a spot</a>
+            <a href="#waitlist" class="btn btn-primary btn-full">Join the waitlist</a>
           </div>
 
         </div>
@@ -195,80 +203,33 @@
       </div>
     </section>
 
-    <!-- RESERVE FORM -->
-    <section class="section" id="reserve">
+    <!-- WAITLIST -->
+    <section class="section" id="waitlist">
       <div class="container container-narrow">
-        <p class="section-label">Reserve your spot</p>
-        <h2>Claim your category</h2>
-        <p class="section-sub">Fill this in and we'll confirm your category is available and follow up within one business day.</p>
-        <form class="reserve-form" onsubmit="handleSubmit(event)">
-          <div class="form-row">
-            <div class="form-group">
-              <label for="biz-name">Business name</label>
-              <input type="text" id="biz-name" name="business_name" placeholder="Your business name" required />
+        <p class="section-label">Early access</p>
+        <h2>Claim your category before we launch</h2>
+        <p class="section-sub">We're filling spots for our first round of mailings. Drop your details below and we'll be in touch to confirm your category and market. No payment until your spot is locked in.</p>
+        <div class="waitlist-wrap">
+          <!-- Tally.so embed — replace the src URL with your live Tally form URL -->
+          <iframe
+            data-tally-src="https://tally.so/embed/YOUR_FORM_ID?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+            loading="lazy"
+            width="100%"
+            height="400"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0"
+            title="Radius Ads waitlist"
+            class="tally-frame"
+          ></iframe>
+          <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+          <noscript>
+            <div class="waitlist-fallback">
+              <p>To join the waitlist, visit <a href="https://tally.so" target="_blank">our signup form</a> directly.</p>
             </div>
-            <div class="form-group">
-              <label for="contact-name">Your name</label>
-              <input type="text" id="contact-name" name="contact_name" placeholder="First and last name" required />
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="email">Email address</label>
-              <input type="email" id="email" name="email" placeholder="you@yourbusiness.com" required />
-            </div>
-            <div class="form-group">
-              <label for="phone">Phone number</label>
-              <input type="tel" id="phone" name="phone" placeholder="(905) 555-0100" />
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="card-type">Card type</label>
-              <select id="card-type" name="card_type" required>
-                <option value="">Select a card...</option>
-                <option value="community">Community Card (2,500 homes) — from $299</option>
-                <option value="neighbourhood">Neighbourhood Card (10,000 homes) — from $649</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="market">Target market</label>
-              <select id="market" name="market" required>
-                <option value="">Select a market...</option>
-                <option value="oakville">Oakville</option>
-                <option value="burlington">Burlington</option>
-                <option value="milton">Milton</option>
-                <option value="mississauga">Mississauga</option>
-                <option value="hamilton">Hamilton</option>
-              </select>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="category">Your business category</label>
-            <input type="text" id="category" name="category" placeholder="e.g. Plumbing, Landscaping" required />
-          </div>
-          <div class="form-group">
-            <label for="offer">Promotion or offer you'd like to feature <span class="label-optional">(optional)</span></label>
-            <input type="text" id="offer" name="offer" placeholder="e.g. 10% off first service, free estimate" />
-          </div>
-          <div class="form-group">
-            <label for="referral">How did you hear about us? <span class="label-optional">(optional)</span></label>
-            <input type="text" id="referral" name="referral" placeholder="Facebook, referral, Google..." />
-          </div>
-
-          <div class="payment-placeholder">
-            <p class="payment-label">Payment</p>
-            <p>Secure payment via Stripe — coming soon. We'll send a payment link once your category is confirmed.</p>
-          </div>
-
-          <button type="submit" class="btn btn-primary btn-full btn-lg">Submit reservation request</button>
-          <p class="form-note">No payment is taken until your spot is confirmed. We'll be in touch within one business day.</p>
-        </form>
-        <div class="form-success" id="form-success" style="display:none;">
-          <div class="success-icon">&#10003;</div>
-          <h3>Request received</h3>
-          <p>Thanks — we'll check your category availability and be in touch within one business day.</p>
+          </noscript>
         </div>
+        <p class="form-note">We'll reach out within one business day to confirm your market and category availability.</p>
       </div>
     </section>
 
@@ -349,7 +310,15 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <a href="/" class="logo">Radius<span>Ads</span></a>
+      <a href="/" class="logo">
+        <svg class="logo-icon" viewBox="0 0 100 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="46" r="38" stroke="#E8621A" stroke-width="9" fill="none"/>
+          <circle cx="50" cy="46" r="24" stroke="#E8621A" stroke-width="9" fill="none"/>
+          <circle cx="50" cy="46" r="8" fill="#E8621A"/>
+          <path d="M50 84 L38 100 L50 94 L62 100 Z" fill="#E8621A"/>
+        </svg>
+        Radius<span>Ads</span>
+      </a>
       <p>Serving Oakville, Burlington, Milton, Mississauga &amp; Hamilton &nbsp;&middot;&nbsp; radiusads.biz</p>
       <p class="footer-copy">&copy; 2025 Radius Ads. All rights reserved.</p>
     </div>

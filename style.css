@@ -39,8 +39,9 @@ body {
   padding: 0.9rem 0;
 }
 .header-inner { display: flex; align-items: center; justify-content: space-between; }
-.logo { font-family: 'Fraunces', serif; font-size: 1.25rem; font-weight: 600; text-decoration: none; color: var(--text); }
+.logo { font-family: 'Fraunces', serif; font-size: 1.25rem; font-weight: 600; text-decoration: none; color: var(--text); display: flex; align-items: center; gap: 8px; }
 .logo span { color: var(--green); }
+.logo-icon { width: 28px; height: 28px; flex-shrink: 0; }
 nav { display: flex; align-items: center; gap: 1.5rem; }
 nav a { font-size: 14px; color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
 nav a:hover { color: var(--text); }
@@ -188,7 +189,13 @@ nav a:hover { color: var(--text); }
 
 .spot-note { font-size: 12px; color: var(--text-light); margin-top: 1rem; }
 
-/* FORM */
+/* WAITLIST */
+.waitlist-wrap { background: var(--bg-alt); border-radius: var(--radius); padding: 2rem; margin-top: 2rem; }
+.tally-frame { display: block; border: none; width: 100%; min-height: 400px; }
+.waitlist-fallback { text-align: center; padding: 2rem; color: var(--text-muted); font-size: 14px; }
+.waitlist-fallback a { color: var(--green); }
+
+
 .reserve-form { background: var(--bg-alt); border-radius: var(--radius); padding: 2rem; margin-top: 2rem; }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 0.75rem; }
 .form-group { display: flex; flex-direction: column; gap: 5px; margin-bottom: 0; }
