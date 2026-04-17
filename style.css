@@ -253,6 +253,56 @@ nav a:hover { color: var(--text); }
 .faq-item.open .faq-a { display: block; }
 .faq-a p { font-size: 14px; color: var(--text-muted); line-height: 1.7; }
 
+/* B2C NOTE */
+.b2c-note {
+  display: flex; align-items: flex-start; gap: 8px;
+  background: #E1F5EE; border: 0.5px solid #1D9E75;
+  border-radius: var(--radius-sm); padding: 0.75rem 1rem;
+  max-width: 560px; margin: 1.25rem auto 0;
+  font-size: 13px; color: #0F6E56; line-height: 1.55;
+  text-align: left;
+}
+.b2c-note strong { color: #085041; }
+
+/* SAMPLE ADS */
+.sample-ads { display: flex; gap: 2rem; margin-top: 2rem; flex-wrap: wrap; justify-content: center; align-items: flex-start; }
+.sample-wrap { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.sample-badge { background: #fff3e0; border: 0.5px solid #E8621A; color: #C04E10; font-size: 11px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; padding: 4px 14px; border-radius: 100px; }
+.sample-note { font-size: 11px; color: var(--text-light); margin: 0; }
+.ad-realtor { width: 216px; background: #1a1a2e; border-radius: 4px; overflow: hidden; display: flex; flex-direction: column; font-family: 'DM Sans', sans-serif; }
+.ad-headshot-area { background: #2a2a4a; display: flex; align-items: center; justify-content: center; height: 80px; }
+.ad-headshot-circle { width: 60px; height: 60px; border-radius: 50%; background: #3a3a5a; border: 3px solid #c9a84c; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 700; color: #c9a84c; }
+.ad-agent-info { padding: 8px 12px 0; }
+.ad-agent-name { font-size: 16px; font-weight: 700; color: #c9a84c; margin: 0; line-height: 1.1; }
+.ad-agent-title { font-size: 9px; color: #aaa; letter-spacing: 0.07em; text-transform: uppercase; margin: 3px 0 0; }
+.ad-brokerage { font-size: 10px; color: #fff; font-weight: 600; margin: 3px 0 0; }
+.ad-offer-bar { margin: 8px 12px 0; padding: 5px 8px; border-radius: 2px; }
+.ad-offer-text { margin: 0; font-size: 10px; font-weight: 700; color: #1a1a2e; line-height: 1.3; text-transform: uppercase; }
+.ad-offer-text span { font-size: 12px; display: block; }
+.ad-bottom-row { display: flex; align-items: center; padding: 8px 12px; gap: 8px; }
+.ad-contact { flex: 1; }
+.ad-contact p { margin: 0; font-size: 9px; color: #ccc; line-height: 1.6; }
+.ad-contact strong { color: #fff; font-size: 10px; }
+.ad-disclaimer { font-size: 7.5px !important; color: #888 !important; margin-top: 4px !important; line-height: 1.4 !important; }
+.ad-scan-label { font-size: 7px; color: #c9a84c; text-align: center; margin: 3px 0 0; text-transform: uppercase; letter-spacing: 0.05em; }
+.ad-plumber { width: 216px; background: #fff; border-radius: 4px; overflow: hidden; display: flex; flex-direction: column; font-family: 'DM Sans', sans-serif; border: 1px solid #ddd; }
+.ad-plumber-top { background: #0b4f8c; padding: 10px 12px 8px; }
+.ad-plumber-name { font-size: 18px; font-weight: 700; color: #fff; margin: 0; line-height: 1.1; text-transform: uppercase; }
+.ad-plumber-tag { font-size: 9px; color: #90bfe8; letter-spacing: 0.06em; text-transform: uppercase; margin: 3px 0 0; }
+.ad-plumber-offer { background: #e8f4ff; padding: 8px 12px; border-bottom: 2px solid #0b4f8c; }
+.ad-plumber-headline { font-size: 20px; font-weight: 700; color: #0b4f8c; margin: 0; line-height: 1.1; text-transform: uppercase; }
+.ad-plumber-sub { font-size: 9px; color: #444; margin: 3px 0 0; line-height: 1.4; }
+.ad-plumber-sub strong { color: #0b4f8c; }
+.ad-plumber-services { padding: 7px 12px; flex: 1; }
+.ad-services-label { font-size: 9px; font-weight: 700; color: #0b4f8c; text-transform: uppercase; letter-spacing: 0.06em; margin: 0 0 4px; }
+.ad-plumber-services ul { margin: 0; padding: 0 0 0 12px; }
+.ad-plumber-services ul li { font-size: 9px; color: #333; line-height: 1.7; }
+.ad-plumber-bottom { display: flex; align-items: center; padding: 7px 10px; gap: 8px; background: #f5f5f5; border-top: 1px solid #ddd; }
+.ad-phone-block { flex: 1; }
+.ad-phone-num { font-size: 15px; font-weight: 700; color: #0b4f8c; margin: 0; }
+.ad-license { font-size: 7.5px; color: #999; margin: 2px 0 0; }
+.ad-mention-tag { background: #0b4f8c; color: #fff; font-size: 7.5px; font-weight: 700; padding: 3px 6px; border-radius: 2px; margin-top: 4px; display: inline-block; text-transform: uppercase; letter-spacing: 0.04em; }
+
 /* FOOTER */
 .site-footer { background: var(--text); color: rgba(255,255,255,0.6); padding: 2.5rem 0; }
 .footer-inner { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; text-align: center; }
