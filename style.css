@@ -174,20 +174,25 @@ nav a:hover { color: var(--text); }
 .market-select-wrap select:focus { border-color: var(--green); }
 .spot.hidden { display: none; }
 
-
-.spot-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(155px, 1fr)); gap: 0.75rem; margin-top: 2rem; }
-.spot {
-  background: var(--bg); border: 0.5px solid var(--border);
-  border-radius: var(--radius-sm); padding: 0.9rem 1rem;
-  display: flex; flex-direction: column; gap: 3px;
+/* CATEGORY LIST */
+.cat-list { margin-top: 1.75rem; }
+.cat-list ul { list-style: none; padding: 0; columns: 3; column-gap: 2rem; }
+.cat-list ul li {
+  font-size: 14px; color: var(--text);
+  padding: 7px 0 7px 18px;
+  border-bottom: 0.5px solid var(--border);
+  position: relative; break-inside: avoid;
 }
-.spot-cat { font-size: 14px; font-weight: 500; }
-.spot-status { font-size: 11px; font-weight: 500; letter-spacing: 0.04em; }
-.spot.open .spot-status { color: var(--green); }
-.spot.taken { opacity: 0.45; }
-.spot.taken .spot-status { color: #E24B4A; }
-
+.cat-list ul li::before {
+  content: ''; position: absolute; left: 0; top: 50%; transform: translateY(-50%);
+  width: 6px; height: 6px; border-radius: 50%; background: var(--green);
+}
+.cat-cta { margin-top: 1.75rem; display: inline-block; }
 .spot-note { font-size: 12px; color: var(--text-light); margin-top: 1rem; }
+
+@media (max-width: 640px) { .cat-list ul { columns: 2; } }
+@media (max-width: 400px) { .cat-list ul { columns: 1; } }
+
 
 /* WAITLIST */
 .waitlist-wrap { background: var(--bg-alt); border-radius: var(--radius); padding: 2rem; margin-top: 2rem; }
