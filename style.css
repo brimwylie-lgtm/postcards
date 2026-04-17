@@ -175,23 +175,24 @@ nav a:hover { color: var(--text); }
 .spot.hidden { display: none; }
 
 /* CATEGORY LIST */
-.cat-list { margin-top: 1.75rem; }
-.cat-list ul { list-style: none; padding: 0; columns: 3; column-gap: 2rem; }
-.cat-list ul li {
+.cat-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0 2rem; margin-top: 1.75rem; }
+.cat-col ul { list-style: none; padding: 0; margin: 0; }
+.cat-col ul li {
   font-size: 14px; color: var(--text);
   padding: 7px 0 7px 18px;
   border-bottom: 0.5px solid var(--border);
-  position: relative; break-inside: avoid;
+  position: relative;
 }
-.cat-list ul li::before {
+.cat-col ul li:first-child { border-top: 0.5px solid var(--border); }
+.cat-col ul li::before {
   content: ''; position: absolute; left: 0; top: 50%; transform: translateY(-50%);
   width: 6px; height: 6px; border-radius: 50%; background: var(--green);
 }
 .cat-cta { margin-top: 1.75rem; display: inline-block; }
 .spot-note { font-size: 12px; color: var(--text-light); margin-top: 1rem; }
 
-@media (max-width: 640px) { .cat-list ul { columns: 2; } }
-@media (max-width: 400px) { .cat-list ul { columns: 1; } }
+@media (max-width: 640px) { .cat-list { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 400px) { .cat-list { grid-template-columns: 1fr; } }
 
 
 /* WAITLIST */
